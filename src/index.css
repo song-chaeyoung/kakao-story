@@ -1,0 +1,18 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+
+@font-face {
+  font-family: "kakaoBigBold";
+  src: url("./Fonts/kakao/KakaoBig-Bold-v1.0.woff2");
+}
+@font-face {
+  font-family: "kakaoBigRegular";
+  src: url("./Fonts/kakao/KakaoBig-Regular-v1.0.woff2");
+}
+@font-face {
+  font-family: "kakaoSmallBold";
+  src: url("./Fonts/kakao/KakaoSmall_Bold_OTF.woff2");
+}
+@font-face {
+  font-family: "kakaoSmallRegular";
+  src: url("./Fonts/kakao/KakaoSmall-Regular-v1.0.woff2");
+}
