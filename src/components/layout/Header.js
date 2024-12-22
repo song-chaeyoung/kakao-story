@@ -24,8 +24,8 @@ const KakaoLogo = styled.div`
   width: 180px;
   height: 70px;
   cursor: pointer;
-  background: ${({ darkmode }) =>
-    darkmode
+  background: ${({ $darkmode }) =>
+    $darkmode
       ? `url("/kakaoLgo/kakaoDark.png") no-repeat`
       : `url("/kakaoLgo/kakaoLight.png") no-repeat`};
   cursor: pointer;
@@ -111,7 +111,7 @@ const Header = () => {
   return (
     <Wrapper>
       <div className="header_left">
-        <KakaoLogo darkmode={darkmode} onClick={() => navigate("/")} />
+        <KakaoLogo $darkmode={darkmode} onClick={() => navigate("/")} />
         {/* <SearchBarHeader
           type="text"
           id="searchBarHeader"

@@ -13,13 +13,15 @@ const Wrapper = styled.div`
 `;
 
 const Container = styled.div`
-  width: 1406px;
+  /* width: 1406px; */
   display: flex;
   flex-direction: column;
   gap: 25px;
-  margin: 60px 0 0 100px;
+  /* margin: 60px 0 0 100px; */
+  margin: 0 auto;
   padding: 0 20px;
-  padding-left: 20%;
+  /* padding-left: 20%; */
+  padding-right: 120px;
   @media screen and (max-width: 1760px) {
     width: 100%;
     padding-left: 10%;
@@ -37,8 +39,6 @@ const PostCard = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPost, setSelectedPost] = useState(null);
   const [posts, setPosts] = useState([]);
-
-  // console.log(selectedPost);
 
   useEffect(() => {
     const postsQuery = query(

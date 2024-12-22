@@ -15,18 +15,16 @@ const VideoList = styled.div`
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding-top: 230px;
-  padding-right: 10px;
-  padding-left: 30px;
-  margin-bottom: 30px;
+  /* padding-top: 230px; */
+  /* padding-right: 10px; */
+  /* padding-left: 30px; */
+  /* margin-bottom: 30px; */
   background: ${({ theme }) => theme.bgSubColor};
-  @media (max-width: 1390px) {
-    display: none;
-  }
 `;
 const VideosContainer = styled.div`
   position: relative;
 `;
+
 const Videos = styled.video`
   width: 100%;
   max-width: 260px;
@@ -38,6 +36,7 @@ const Videos = styled.video`
   cursor: pointer;
   object-fit: cover;
 `;
+
 const ModalOverlay = styled(motion.div)`
   position: fixed;
   top: 0;

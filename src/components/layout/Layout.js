@@ -16,6 +16,31 @@ const ContentWrapper = styled.div`
   flex: 1;
 `;
 
+const Gototop = styled.a`
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fae100;
+  color: #fff;
+  font-size: 20px;
+  position: fixed;
+  bottom: 10%;
+  right: 2%;
+  /* padding-top: 5px; */
+  opacity: 0;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  cursor: pointer;
+  &.active {
+    opacity: 1;
+    bottom: 20px;
+  }
+`;
+
 const Layout = () => {
   const [mobileSize, setMobileSize] = useState(false);
 
@@ -39,6 +64,12 @@ const Layout = () => {
         {mobileSize ? <MobileSidebar /> : <Sidebar />}
         <Outlet />
       </ContentWrapper>
+      <Gototop
+        className="active"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+      >
+        <i className="fa-solid fa-chevron-up"></i>
+      </Gototop>
     </LayoutContainer>
   );
 };

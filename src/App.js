@@ -14,6 +14,7 @@ import KakaoRedirect from "./routes/KakaoRedirect";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { userAuth } from "./configs/firebase";
 import LoadingScreen from "./common/LoadingScreen";
+import ShotPage from "./pages/ShotPage";
 
 // 라우터 설정
 const router = createBrowserRouter([
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
     children: [
       { path: "", element: <MainPage /> },
       { path: "/detail/:id", element: <DetailPage /> },
+      { path: "/shorts", element: <ShotPage /> },
       {
         path: "/profile",
         element: (

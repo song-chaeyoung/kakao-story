@@ -161,6 +161,7 @@ const Sidebar = () => {
   const navigate = useNavigate();
   const homeMatch = useMatch("/");
   const profileMatch = useMatch("/profile");
+  const shotMatch = useMatch("/shorts");
 
   const toggleText = () => {
     if (showText) {
@@ -199,16 +200,19 @@ const Sidebar = () => {
               </div>
             )}
           </li>
-          <li>
+          <li
+            className={shotMatch ? "active" : ""}
+            onClick={() => navigate("/shorts")}
+          >
             <span>
               <span className="material-symbols-outlined">
                 local_fire_department
               </span>
             </span>
-            {showText && <p>실시간 트렌드</p>}
+            {showText && <p>숏폼</p>}
             {showText ? null : (
               <div className="overText">
-                <p>실시간 트렌드</p>
+                <p>숏폼</p>
               </div>
             )}
           </li>

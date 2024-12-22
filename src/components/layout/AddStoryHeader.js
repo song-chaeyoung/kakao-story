@@ -195,6 +195,7 @@ const AddStoryHeader = ({ setWriteMode }) => {
 
       if (file) {
         const locationRef = ref(storage, `contents/postsImg/${docRef.id}`);
+        
         const result = await uploadBytes(locationRef, file);
         const url = await getDownloadURL(result.ref);
         const fileType = file.type;
